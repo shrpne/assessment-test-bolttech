@@ -1,0 +1,10 @@
+{
+  "name": "task-manager-shared",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Shared types for task manager application",
+  "main": "types.ts",
+  "exports": {
+    "./*": "./*"
+  }
+}

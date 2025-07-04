@@ -1,0 +1,25 @@
+{
+  "name": "task-manager-app",
+  "version": "1.0.0",
+  "description": "Multi-user task manager web application",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "install:all": "npm ci",
+    "clean": "rm -rf node_modules backend/node_modules frontend/node_modules frontend/dist",
+    "db:push": "cd backend && npm run db:push",
+    "preview": "cd frontend && npm run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
